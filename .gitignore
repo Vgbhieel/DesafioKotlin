@@ -1,0 +1,21 @@
+# IDEA
+# ----
+.idea
+.idea/
+.shelf
+/*.iml
+/*.ipr
+/*.iws
+/out
+
+/out/*.*
+
+# Gradle
+# ------
+.gradle
+/gradle
+/build
+build*
+gradle*
+*properties
+*.kts
