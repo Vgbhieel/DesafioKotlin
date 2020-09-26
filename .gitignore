@@ -7,7 +7,7 @@
 /*.ipr
 /*.iws
 /out
-
+lib/
 /out/*.*
 
 # Gradle
