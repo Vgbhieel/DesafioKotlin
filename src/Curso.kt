@@ -1,7 +1,8 @@
 class Curso(
-        val nome: String,
+        var nome: String,
         val codCurso: Int
 ) {
+
     override fun equals(other: Any?): Boolean {
         return if (other == null || other !is Curso) {
             false
