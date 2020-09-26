@@ -14,4 +14,22 @@ class Curso(
             codCurso == other.codCurso
         }
     }
+
+    fun adicionarUmAluno(aluno: Aluno): Boolean {
+        return if (listaAlunosMatriculados.size < qtdMaximaAlunos) {
+            listaAlunosMatriculados.add(aluno)
+            true
+        } else {
+            false
+        }
+    }
+
+    fun excluirAluno(aluno: Aluno) : Boolean {
+        return if (listaAlunosMatriculados.contains(aluno)) {
+            listaAlunosMatriculados.remove(aluno)
+            true
+        } else {
+            false
+        }
+    }
 }
