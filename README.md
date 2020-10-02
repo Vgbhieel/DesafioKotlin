@@ -1,7 +1,6 @@
 # Desafio Kotlin - Digital House (Formação Android)
 
-Este repositório foi criado para a publicação do desafio proposto durante a formação Android da Digital House.
-
+Este repositório foi criado para a publicação do desafio proposto durante a formação Android da Digital House.  
 Alguns conceitos de Kotlin abordados durante a formação:
   - Herança
   - Construtores
@@ -13,17 +12,16 @@ Alguns conceitos de Kotlin abordados durante a formação:
   - equals
   - toString
   - Exceções
-
+  
 ## Sobre o Desafio:
 
-O desafio proposto foi dividido em onze partes, de A até K, disponíveis [aqui][pdf_desafio].
+O desafio proposto foi dividido em onze partes, de A até K, disponíveis [aqui][pdf_desafio].  
 O diagrama de classes do desafio se encontra disponível [aqui][uml].
 > Para vizualisar o diagrama acesse o [Draw.io][draw] e abra o arquivo disponibilizado anteriormente.
 
-
 ## Contato
 
-* [LinkedIn][linkedin] - Fique a vontade em se conectar comigo.
+* [LinkedIn][linkedin] - Fique à vontade em se conectar comigo.
 * [E-mail][email] - Contate-me caso necessário.
 
 E claro, fique à vontade em me seguir no [GitHub][github].
