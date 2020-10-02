@@ -13,4 +13,9 @@ class DigitalHouseManager() {
     fun excluirCurso(codCurso: Int) {
         cursos.removeIf { it.codCurso == codCurso }
     }
+
+    fun registrarProfessorAdjunto(nome: String, sobrenome: String, codProfessor: Int, qtdHorasMonitoria: Int) {
+        val novoProfessor = ProfessorAdjunto(nome = nome, sobrenome = sobrenome, codProfessor = codProfessor, qtdHorasMonitoria = qtdHorasMonitoria)
+        professores.add(novoProfessor)
+    }
 }
