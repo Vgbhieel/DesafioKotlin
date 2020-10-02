@@ -27,4 +27,9 @@ class DigitalHouseManager() {
     fun excluirProfessor(codProfessor: Int) {
         professores.removeIf { it.codProfessor == codProfessor }
     }
+
+    fun matricularAluno(nome: String, sobrenome: String, codAluno: Int) {
+        val novoAluno = Aluno(nome = nome, sobrenome = sobrenome, codAluno = codAluno)
+        alunos.add(novoAluno)
+    }
 }
