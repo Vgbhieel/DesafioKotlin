@@ -32,4 +32,34 @@ class DigitalHouseManager() {
         val novoAluno = Aluno(nome = nome, sobrenome = sobrenome, codAluno = codAluno)
         alunos.add(novoAluno)
     }
+
+    fun matricularAluno(codAluno: Int, codCurso: Int) {
+        // PESQUISA E VALIDA O codCurso
+        val curso = cursos.find { it.equals(codCurso) }
+
+        if (curso !is Curso) {
+            println("Nenhum curso com o código $codCurso foi encontrado.")
+            return
+        }
+
+        // PESQUISA E VALIDA O codAluno
+        val aluno = alunos.find { it.equals(codAluno) }
+
+        if (aluno !is Aluno) {
+            println("Nenhum aluno com o código $codAluno foi encontrado.")
+            return
+        }
+
+        // ADICIONA O ALUNO NO CURSO, CASO SEJA POSSÍVEL
+        if (curso.adicionarUmAluno(aluno)) {
+            println("Não há vagas para o curso ${curso.nome}.")
+            return
+        }
+
+        // MATRICULA O ALUNO NO CURSO
+        val matricula = Matricula(aluno = aluno, curso = curso)
+        matriculas.add(matricula)
+        println("Matrícula do aluno(a): ${aluno.nome} realizada com sucesso.")
+        println("Curso da Matrícula: ${curso.nome}.")
+    }
 }
