@@ -23,4 +23,8 @@ class DigitalHouseManager() {
         val novoProfessor = ProfessorTitular(nome = nome, sobrenome = sobrenome, codProfessor = codProfessor, especialidade = especialidade)
         professores.add(novoProfessor)
     }
+
+    fun excluirProfessor(codProfessor: Int) {
+        professores.removeIf { it.codProfessor == codProfessor }
+    }
 }
