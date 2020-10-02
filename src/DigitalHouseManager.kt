@@ -35,7 +35,7 @@ class DigitalHouseManager() {
 
     fun matricularAluno(codAluno: Int, codCurso: Int) {
         // PESQUISA E VALIDA O codCurso
-        val curso = cursos.find { it.equals(codCurso) }
+        val curso = cursos.find { it.codCurso == codCurso }
 
         if (curso !is Curso) {
             println("Nenhum curso com o código $codCurso foi encontrado.")
@@ -43,7 +43,7 @@ class DigitalHouseManager() {
         }
 
         // PESQUISA E VALIDA O codAluno
-        val aluno = alunos.find { it.equals(codAluno) }
+        val aluno = alunos.find { it.codAluno == codAluno }
 
         if (aluno !is Aluno) {
             println("Nenhum aluno com o código $codAluno foi encontrado.")
@@ -51,7 +51,7 @@ class DigitalHouseManager() {
         }
 
         // ADICIONA O ALUNO NO CURSO, CASO SEJA POSSÍVEL
-        if (curso.adicionarUmAluno(aluno)) {
+        if (!curso.adicionarUmAluno(aluno)) {
             println("Não há vagas para o curso ${curso.nome}.")
             return
         }
@@ -65,23 +65,23 @@ class DigitalHouseManager() {
 
     fun alocarProfessores(codCurso: Int, codProfessorTitular: Int, codProfessorAdjunto: Int) {
         // PESQUISA E VALIDA O codProfessorTitular
-        val professorTitular = professores.find { it.equals(codProfessorTitular) }
+        val professorTitular = professores.find { it.codProfessor == codProfessorTitular }
 
         if (professorTitular !is ProfessorTitular) {
-            println("O código informado não pertence a nenhum professor titular.")
+            println("Nenhum professor titular com o código ${codProfessorTitular} foi encontrado.")
             return
         }
 
         // PESQUISA E VALIDA O codProfessorAdjunto
-        val professorAdjunto = professores.find { it.equals(codProfessorAdjunto) }
+        val professorAdjunto = professores.find { it.codProfessor == codProfessorAdjunto }
 
         if (professorAdjunto !is ProfessorAdjunto) {
-            println("O código informado não pertence a nenhum professor adjunto.")
+            println("Nenhum professor titular com o código ${codProfessorAdjunto} foi encontrado.")
             return
         }
 
         // PESQUISA E VALIDA O codCurso
-        val curso = cursos.find { it.equals(codCurso) }
+        val curso = cursos.find { it.codCurso == codCurso }
 
         if (curso !is Curso) {
             println("Nenhum curso com o código $codCurso foi encontrado.")
