@@ -62,4 +62,35 @@ class DigitalHouseManager() {
         println("Matrícula do aluno(a): ${aluno.nome} realizada com sucesso.")
         println("Curso da Matrícula: ${curso.nome}.")
     }
+
+    fun alocarProfessores(codCurso: Int, codProfessorTitular: Int, codProfessorAdjunto: Int) {
+        // PESQUISA E VALIDA O codProfessorTitular
+        val professorTitular = professores.find { it.equals(codProfessorTitular) }
+
+        if (professorTitular !is ProfessorTitular) {
+            println("O código informado não pertence a nenhum professor titular.")
+            return
+        }
+
+        // PESQUISA E VALIDA O codProfessorAdjunto
+        val professorAdjunto = professores.find { it.equals(codProfessorAdjunto) }
+
+        if (professorAdjunto !is ProfessorAdjunto) {
+            println("O código informado não pertence a nenhum professor adjunto.")
+            return
+        }
+
+        // PESQUISA E VALIDA O codCurso
+        val curso = cursos.find { it.equals(codCurso) }
+
+        if (curso !is Curso) {
+            println("Nenhum curso com o código $codCurso foi encontrado.")
+            return
+        }
+
+        // ALOCANDO PROFESSORES
+        curso.professorTitular = professorTitular
+        curso.professorAdjunto = professorAdjunto
+        println("Professores alocados com sucesso.")
+    }
 }
