@@ -9,7 +9,7 @@ um professor titular (ProfessorTitular), um professor adjunto (ProfessorAdjunto)
 
 O desafio proposto foi dividido em onze partes, de A até K, disponíveis [aqui][pdf_desafio].  
 O diagrama de classes do desafio se encontra disponível [aqui][uml].
-> Para vizualisar o diagrama acesse o [Draw.io][draw] e abra o arquivo disponibilizado anteriormente.
+> Para editar o diagrama acesse o [Draw.io][draw] e abra o arquivo disponibilizado anteriormente.
 
 ## Contato
 
